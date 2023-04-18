@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is wrote in HTML</h1>
+    <p id="paragraph">Mekhi was here</p>
+    <button onclick="changeStyle()"> Click This </button>
+
+    <hr>
+    <p>This button counts by every time you click it.</p>
+    <button onclick="addCounter()" id="counterbutton">0</button>
+    <hr>
+
+    <input id="my_input">
+    <button onclick="inputButton()" id="input_button">Click Me</button>  
+    <hr>    
+
+    <p>input the secret password</p>
+    <input id="p_input">
+    <button onclick="secretButton()" id="secret_button">Click</button>
+    <hr>
+
+    <script lang="js">
+        console.log("Hello World")
+        document.write("<h1>This is wrote in JavaScript</h1>")
+        document.write("Welcome to JavaScript")
+
+
+        let myParagraph = document.getElementById("paragraph")
+        myParagraph.innerHTML = 'This was modified in JavaScript'
+         
+        function changeStyle() {
+            let myParagraph = document.getElementById("paragraph")
+            myParagraph.innerHTML = 'This was modified in JavaScript'
+            myParagraph.style = 'background: red; color: cyan;'
+            alert("You clicked the changeStyle button")
+        }
+
+        let counter = 0
+
+        function addCounter() {
+            counter = counter + 1
+            let counterButton = document.getElementById("counterbutton")
+            counterButton.innerHTML = counter
+        }
+
+        function inputButton() {
+            let myInput = document.getElementById("my_input")
+            console.log(myInput.value)
+        }
+    
+        function secretButton() {
+            let passwordInput = document.getElementById('p_input')
+            let secretButton = document.getElementById("secret_button")
+            if(passwordInput == 'Mekhi') {
+                window.location = "https://youtube.com"
+            } else {
+                alert('Password is Incorrect, Try Again.')
+            }
+        }
+    </script>
+</body>
+</html>
