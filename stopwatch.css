@@ -1,23 +1,32 @@
-
+#stopwatchtext {
+    color:cadetblue;
+}
 .stopwatch {
     text-align: center;
+    font-size: 20px;
     margin-top: 100px;
+    
 }
 
-.display {
+.timerdisplay {
     font-size: 35px;
     font-weight: bolder;
     margin: 15px;
 }
 
-#start-btn {
-    
+button {
+    padding: 5px 7px 5px 7px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #9cb7d3;
+    color: #000;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #136cca;
 }
 
 #stop-btn {
-
-}
-
-#reset-btn {
-
+    padding: 5px 9px 5px 9px;
 }
