@@ -1,0 +1,27 @@
+#stopwatch, #timer {
+    text-align: center;
+    
+}
+
+
+.stopwatch {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.display {
+    font-size: 35px;
+    
+}
+
+#start-btn {
+    
+}
+
+#stop-btn {
+
+}
+
+#reset-btn {
+
+}
