@@ -17,9 +17,13 @@ const startStopwatch = () => {
     elapsedTime = Date.now() - startTime;
     displayElapsedTime();
   }, 10);
+  document.getElementById('start-btn').style.display = 'none'
+
 };
 
 const stopStopwatch = () => {
+    document.getElementById('start-btn').style.display = 'block'
+    document.getElementById('stop-btn').style.display = 'none'
   clearInterval(timerInterval);
   timerInterval = null;
 };
@@ -27,9 +31,9 @@ const stopStopwatch = () => {
 const resetStopwatch = () => {
   clearInterval(timerInterval);
   timerInterval = null;
+  elapsedTime = 0;
   displayElapsedTime();
   timerDisplay.innerHTML = "00:00:00"
-
 };
 
 
