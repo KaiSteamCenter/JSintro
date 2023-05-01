@@ -27,8 +27,9 @@ const stopStopwatch = () => {
 const resetStopwatch = () => {
   clearInterval(timerInterval);
   timerInterval = null;
-  elapsedTime = 0;
   displayElapsedTime();
+  timerDisplay.innerHTML = "00:00:00"
+
 };
 
 
