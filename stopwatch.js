@@ -46,7 +46,6 @@ const resetStopwatch = () => {
 
 
 const lapStopwatch = () => {
-  // Create a new lap time element and display it
   const lapTime = document.createElement('li');
   lapTime.textContent = timerDisplay.textContent;
   const lapList = document.getElementById('lap-list');
