@@ -40,6 +40,17 @@ const resetStopwatch = () => {
   elapsedTime = 0;
   displayElapsedTime();
   timerDisplay.innerHTML = "00:00:00"
+  const lapList = document.getElementById('lap-list');
+  lapList.innerHTML = "";
 };
 
 
+const lapStopwatch = () => {
+  // Create a new lap time element and display it
+  const lapTime = document.createElement('li');
+  lapTime.textContent = timerDisplay.textContent;
+  const lapList = document.getElementById('lap-list');
+  lapList.appendChild(lapTime);
+};
+
+lapBtn.addEventListener('click', lapStopwatch);

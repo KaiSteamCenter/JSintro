@@ -46,3 +46,12 @@ body {
     margin-right: 15px;
     color:#136cca
 }
+
+#lap-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: table;
+    float: right;
+    margin-right: 125px;
+  }
