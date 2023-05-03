@@ -4,6 +4,7 @@ let startTime, elapsedTime = 0, timerInterval;
 
 let startBtn = document.getElementById("start-btn")
 let stopBtn = document.getElementById("stop-btn")
+let lapBtn = document.getElementById("lap-btn")
 
 
 let displayElapsedTime = () => {
@@ -16,6 +17,7 @@ let displayElapsedTime = () => {
 const startStopwatch = () => {
   stopBtn.disabled = false
   startBtn.disabled = true
+  lapBtn.disabled = false
   if (timerInterval) return;
   startTime = Date.now() - elapsedTime;
   timerInterval = setInterval(() => {
@@ -28,6 +30,7 @@ const startStopwatch = () => {
 const stopStopwatch = () => {
   startBtn.disabled = false
   stopBtn.disabled = true
+  lapBtn.disabled = false
   clearInterval(timerInterval);
   timerInterval = null;
 };
@@ -35,6 +38,7 @@ const stopStopwatch = () => {
 const resetStopwatch = () => {
     stopBtn.disabled = false
     startBtn.disabled = false
+    lapBtn.disabled = true
   clearInterval(timerInterval);
   timerInterval = null;
   elapsedTime = 0;
@@ -52,4 +56,3 @@ const lapStopwatch = () => {
   lapList.appendChild(lapTime);
 };
 
-lapBtn.addEventListener('click', lapStopwatch);
