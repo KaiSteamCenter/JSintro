@@ -11,7 +11,7 @@ let displayElapsedTime = () => {
   let minutes = Math.floor(elapsedTime / 60000);
   let seconds = Math.floor((elapsedTime % 60000) / 1000);
   let milliseconds = elapsedTime % 1000;
-  timerDisplay.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}:${milliseconds.toString().slice(0, 2)}`;
+  timerDisplay.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}:${milliseconds.toString().padStart.slice(0, 2)}`;
 };  
 
 const startStopwatch = () => {
